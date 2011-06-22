@@ -135,6 +135,20 @@
           \draw<\afterSplitB>[\where, bitonic] (1 - \dR, 1 + \dR) rectangle (1 + \dR, 0 - \dR);
         }
 
+        % ordering after first local sort
+        \fork\forij
+          \draw<\afterSortA, \beforeSplitA>[sorted, \where] (\i - \dr, \j - \dr) rectangle (\i + \dr, \j + \dr);
+        \forij \node<\afterSortA, \beforeSplitA> [above left of=p\i\j0] {\asc};
+        \forij \node<\afterSortA, \beforeSplitA> [above left of=p\i\j1] {\desc};
+
+        % ordering after second local sort
+        \fork {
+          \draw<\afterSortB, \beforeSplitB>[\where, sorted] (0 - \dr, 1 + \dr) rectangle (0 + \dr, 0 - \dr);
+          \draw<\afterSortB, \beforeSplitB>[\where, sorted] (1 - \dr, 1 + \dr) rectangle (1 + \dr, 0 - \dr);
+        }
+        \fori \node<\afterSortB, \beforeSplitB> [above left of=p\i01] {\asc};
+        \fori \node<\afterSortB, \beforeSplitB> [above left of=p\i11] {\desc};
+
         % first local sorting stage
         \forij \node<\sortA> [lsort, above left of=p\i\j0] {\asc};
         \forij \node<\sortA> [lsort, above left of=p\i\j1] {\desc};
