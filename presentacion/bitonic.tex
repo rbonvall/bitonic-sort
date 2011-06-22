@@ -114,11 +114,12 @@
         \forij \draw<\afterSplitC>                       [ordered] (p0\i\j) -- (p1\i\j);
 
         \def\dr{.15}
+        \def\dR{.18}
 
         % bitonicity among vertical neighbors
         \fork {
-          \draw<\beforeSplitA, \commA>[\where, bitonic] (0 - \dr, 1 + \dr) rectangle (0 + \dr, 0 - \dr);
-          \draw<\beforeSplitA, \commA>[\where, bitonic] (1 - \dr, 1 + \dr) rectangle (1 + \dr, 0 - \dr);
+          \draw<\beforeSplitA, \commA>[\where, bitonic] (0 - \dR, 1 + \dR) rectangle (0 + \dR, 0 - \dR);
+          \draw<\beforeSplitA, \commA>[\where, bitonic] (1 - \dR, 1 + \dR) rectangle (1 + \dR, 0 - \dR);
         }
 
         % bitonicity after first split
@@ -126,12 +127,12 @@
           \draw<\afterSplitA>[bitonic, \where] (\i - \dr, \j - \dr) rectangle (\i + \dr, \j + \dr);
 
         % bitonicity among front and back neighbors
-        \fork \draw<\beforeSplitB, \commB>[\where,  bitonic] (0 - \dr, 0 - \dr) rectangle (1 + \dr, 1 + \dr);
+        \fork \draw<\beforeSplitB, \commB>[\where,  bitonic] (0 - \dR, 0 - \dR) rectangle (1 + \dR, 1 + \dR);
 
         % bitonicity after second split
         \fork {
-          \draw<\afterSplitB>[\where, bitonic] (0 - \dr, 1 + \dr) rectangle (0 + \dr, 0 - \dr);
-          \draw<\afterSplitB>[\where, bitonic] (1 - \dr, 1 + \dr) rectangle (1 + \dr, 0 - \dr);
+          \draw<\afterSplitB>[\where, bitonic] (0 - \dR, 1 + \dR) rectangle (0 + \dR, 0 - \dR);
+          \draw<\afterSplitB>[\where, bitonic] (1 - \dR, 1 + \dR) rectangle (1 + \dR, 0 - \dR);
         }
 
         % first local sorting stage
