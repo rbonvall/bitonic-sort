@@ -136,12 +136,12 @@
         }
 
         % first local sorting stage
-        \forij \node<\sortA, \beforeSplitA> [lsort, above left of=p\i\j0] {\asc};
-        \forij \node<\sortA, \beforeSplitA> [lsort, above left of=p\i\j1] {\desc};
+        \forij \node<\sortA> [lsort, above left of=p\i\j0] {\asc};
+        \forij \node<\sortA> [lsort, above left of=p\i\j1] {\desc};
 
         % second local sorting stage
-        \forij \node<\sortB, \beforeSplitB> [lsort, above left of=p\i0\j] {\asc};
-        \forij \node<\sortB, \beforeSplitB> [lsort, above left of=p\i1\j] {\desc};
+        \forij \node<\sortB> [lsort, above left of=p\i0\j] {\asc};
+        \forij \node<\sortB> [lsort, above left of=p\i1\j] {\desc};
 
         % third local sorting stage
         \forij \node<\sortC> [lsort, above left of=p0\i\j] {\asc};
